@@ -1,2 +1,2 @@
 # breast-cancer-detection
-Breast Cancer Detection - Supervised Learning
+Breast Cancer Detection - Classification
