@@ -41,11 +41,23 @@ The dataset used is the Wisconsin Breast Cancer Dataset, which contains 506 samp
 ### Results
 The best performing model is Logistic Regression with a cross validation accuracy of 97.36%.
 
+After the first hyperparameter tuning, the CV Score decreased to 97.14% - Code below
+`rs_clf = RandomizedSearchCV(
+    estimator = clf_logReg, 
+    param_distributions = param_grid,
+    n_iter = 10, # number of models to try
+    cv  = 10,
+    verbose=2,
+    n_jobs = -1,
+    scoring = "roc_auc"
+)`
+Best parameters for this were: `solver='saga', penalty = 'l1', C= 1.75`
+
 ### Future Work
+* Try different hyperparameters to get a better score
 * Remove features with high self-correlation.
-* Remove features with low correlation to the target variable
-* Analyse for feature importance
-* Modularize the analysis - https://www.youtube.com/watch?v=53VCqbceq2U
+* Remove features with low correlation to the target variable (Analyse for feature importance)
+* Modularize the code - https://www.youtube.com/watch?v=53VCqbceq2U
 
 ### Contributing
 Contributions are welcome! Please follow these steps to contribute:

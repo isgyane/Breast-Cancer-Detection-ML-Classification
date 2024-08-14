@@ -3,3 +3,6 @@ data/BRCA_original.csv
 notebooks/breast_cancer_detection copy.ipynb
 data/BRCA_work.csv
 notebooks/breast_cancer_detection.ipynb
+notebooks/02_preprocessing.ipynb
+notebooks/03_modelling.ipynb
+notebooks/04_hyperparameter_tune.ipynb
