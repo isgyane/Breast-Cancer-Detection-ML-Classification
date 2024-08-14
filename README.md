@@ -49,12 +49,12 @@ The best performing model is Logistic Regression with a cross validation accurac
 
 ### Contributing
 Contributions are welcome! Please follow these steps to contribute:
-    Fork the repository.
-    Create a new branch (git checkout -b feature/YourFeature).
-    Make your changes.
-    Commit your changes (git commit -m 'Add new feature').
-    Push to the branch (git push origin feature/YourFeature).
-    Open a Pull Request.
+* Fork the repository.
+* Create a new branch (git checkout -b feature/YourFeature).
+* Make your changes.
+* Commit your changes (git commit -m 'Add new feature').
+* Push to the branch (git push origin feature/YourFeature).
+* Open a Pull Request.
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for more details.
