@@ -1,69 +1,62 @@
 # Breast Cancer Detection
 
 ### Project Overview
-Breast cancer is a significant health concern, hence early detection is crucial for successful treatment.
-This project aims to develop and evaluate 3 machine learning models to predict whether a tumor is benign or malignant based on features derived from a breast cancer dataset. The project focuses on using various supervised learning algorithms to achieve high accuracy in classification.
+Breast cancer is a significant health concern, with early detection being crucial for improving patient outcomes and reducing treatment costs. This project demonstrates the development and evaluation of three machine learning models aimed at accurately predicting whether a breast tumor is benign or malignant. By leveraging these models, healthcare providers can potentially make more informed decisions, leading to earlier interventions and better patient prognosis.
+
+### Business Value
+The primary goal of this project is to provide a reliable, automated tool for breast cancer detection that can assist radiologists and oncologists in making quicker and more accurate diagnoses. Implementing this tool could lead to:
+* **Reduced Diagnostic Time:** Automating the initial screening process, allowing healthcare professionals to focus on more complex cases.
+* **Improved Accuracy:** Enhancing diagnostic precision, reducing the likelihood of false positives and negatives, and consequently improving patient trust and treatment outcomes.
+* **Cost Savings:** By identifying malignant tumors earlier, the treatment can be less invasive and more cost-effective, reducing the financial burden on patients and healthcare systems
 
 ### Dataset
-The dataset used is the Wisconsin Breast Cancer Dataset, which contains 506 samples and 32 features.
-* Link to Dataset - https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data
-* Target - The target variable is `diagnosis`, which indicates whether the tumor is benign (B) or malignant (M)
-* Data Preprocessing steps
-    * Statisical Summarization
-    * Removed a Column with missing values
-    * Handling of Categorical variables
-    * Correlation analysis within features and between features and target variable
-    * Feature scaling using Normalization technique (StandardScaler)
+The dataset used is the Wisconsin Breast Cancer Dataset, which contains 569 samples and 32 features.
+* Link to Dataset - [Wisconsin Breast Cancer Dataset]([url](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)) 
+* The target variable - `diagnosis` - indicates whether the tumor is benign (B) or malignant (M)
+
+#### **Key Data Preprocessing steps**
+    * Statistical Summarization and handling of missing values
+    * Categorical variable encoding and correlation analysis   
+    * Feature scaling using normalization techniques
 
 ### Project Directory
-* data - Contains the dataset file (`data/breast-cancer-wisconsin-data_work.csv`)
-* notebooks - Contains Jupyter Notebooks for data exploration, modeling, and evaluation
-* scripts - Stores python re-usable python code
-* results - Contains exported images for results
+* data: Contains the dataset file.
+* notebooks: Jupyter Notebooks for data exploration, modeling, and evaluation.
+* scripts: Reusable Python code for model training and evaluation.
+* results: Exported images and results from model evaluations
 
 ### Dependencies
-* pandas
-* numpy
-* matplotlib
-* seaborn
-* scikit-learn
+This project was built using Python and the following key libraries:
+* `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
 
 ### Usage
 1. Clone the repository.
 2. Install required dependencies using `pip install -r requirements.txt`.
 3. Run the Jupyter Notebook named `notebooks/breast_cancer_detection.ipynb`.
 
-### Models
-* Logistic Regression
-* Random Forest
-* Support Vector Machine
+### Key Models Developed
+* **Logistic Regression:** Achieved a cross-validation accuracy of 97.36%, demonstrating strong predictive performance.
+* **Random Forest:** Offers interpretability and robustness, useful for clinical settings.
+* **Support Vector Machine:** Effective in high-dimensional spaces, providing additional insights into tumor classification.
 
-### Results
-The best performing model is Logistic Regression with a cross validation accuracy of 97.36%.
+### Results and Validation
+The Logistic Regression model outperformed others with a cross-validation accuracy of 97.36%, making it the most reliable model for this dataset. This high accuracy suggests that the model is well-suited for **initial breast cancer screening** in a clinical setting.
 
-### Future Work
-* Try different hyperparameters to get a better score
-* Remove features with high self-correlation.
-* Remove features with low correlation to the target variable (Analyse for feature importance)
-* Modularize the code - https://www.youtube.com/watch?v=53VCqbceq2U
+### Future Work and Recommendations
+* **Hyperparameter Tuning:** Experiment with different model hyperparameters to improve predictive accuracy.
+* **Feature Engineering:** Remove or combine features with high self-correlation and low correlation with the target variable to reduce overfitting and improve model interpretability.
+* **Model Deployment:** Integrate the model into a web-based application for real-time predictions, enabling broader access for healthcare providers.
 
 ### Contributing
 Contributions are welcome! Please follow these steps to contribute:
-* Fork the repository.
-* Create a new branch (git checkout -b feature/YourFeature).
-* Make your changes.
-* Commit your changes (git commit -m 'Add new feature').
-* Push to the branch (git push origin feature/YourFeature).
-* Open a Pull Request.
+* Fork the repository and create a new branch
+* Implement your changes and commit them with a clear message
+* Push to the branch and open a Pull Request for review.
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-### Acknowledgements
-Scikit-learn Documentation for the extensive machine learning tools.
-UCI Machine Learning Repository for providing the Breast Cancer Wisconsin (Diagnostic) Data Set.
-
-### Resources Used
-* Extracting metrics from a classification report - "https://stackoverflow.com/questions/48417867/access-to-numbers-in-classification-report-sklearn"
-* Importing a notebook into another notebbook - dhttps://stackoverflow.com/questions/20186344/importing-an-ipynb-file-from-another-ipynb-file
-* Choosing the right estimator - https://scikit-learn.org/stable/machine_learning_map.html#choosing-the-right-estimator
+### Key Resources Used
+* [Extracting metrics from a classification report]([url](https://stackoverflow.com/questions/48417867/access-to-numbers-in-classification-report-sklearn))
+* [Importing a notebook into another notebbook]([url](https://stackoverflow.com/questions/20186344/importing-an-ipynb-file-from-another-ipynb-file))
+* [Choosing the right estimator]([url](https://scikit-learn.org/stable/machine_learning_map.html#choosing-the-right-estimator))
