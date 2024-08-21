@@ -3,4 +3,7 @@ numpy==2.0.1
 pandas==2.2.2
 scikit_learn==1.5.1
 seaborn==0.13.2
+<<<<<<< HEAD
 IPython
+=======
+>>>>>>> ebdb58fe6ac64d4bc68576ff30b81ad52dbfecab
