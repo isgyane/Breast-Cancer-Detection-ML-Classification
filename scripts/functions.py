@@ -6,11 +6,7 @@ from sklearn.metrics import classification_report
 import pandas as pd
 
 
-<<<<<<< HEAD
 # Function to evaluate classification models - 2
-=======
-# Function to evaluate classification models - 1
->>>>>>> ebdb58fe6ac64d4bc68576ff30b81ad52dbfecab
 
 def evaluate_classification_models(models, cv, X_train, y_train, X_test, y_test):
     """
@@ -99,11 +95,7 @@ def evaluate_classification_models_2(models, cv, X_train, y_train, X_test, y_tes
     metrics_df = pd.DataFrame(columns=["Model", "Accuracy", "Precision", "Recall", "F1 Score", "CV Accuracy"])
 
     for model_name, model_class in models.items():
-<<<<<<< HEAD
         # Create a pipeline
-=======
-        # Create a pipeline (optional, but good for consistency)
->>>>>>> ebdb58fe6ac64d4bc68576ff30b81ad52dbfecab
         model_pipeline = make_pipeline(model_class())
         
         try:
@@ -137,5 +129,11 @@ def evaluate_classification_models_2(models, cv, X_train, y_train, X_test, y_tes
             print(f"An error occurred while processing {model_name}: {e}")
 
     return metrics_df
+
+
+
+def wrangle(filepath):
+    
+    return pd.read_csv(filepath)
 
     

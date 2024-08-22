@@ -5,10 +5,6 @@
 
 
 # Import necessary libraries
-<<<<<<< HEAD
-=======
-
->>>>>>> ebdb58fe6ac64d4bc68576ff30b81ad52dbfecab
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
