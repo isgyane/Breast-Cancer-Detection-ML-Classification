@@ -40,7 +40,7 @@ This project was built using Python and the following key libraries:
 * **Support Vector Machine:** Effective in high-dimensional spaces, providing additional insights into tumor classification.
 
 ### Results and Validation
-The Logistic Regression model outperformed others with a cross-validation accuracy of 97.36%, making it the most reliable model for this dataset. This high accuracy suggests that the model is well-suited for **initial breast cancer screening** in a clinical setting.
+Using the Stratified cross-validation score, the SVC model outperformed the others with a score of 97.36%, making it the most reliable model for this dataset. This high accuracy suggests that the model is well-suited for **initial breast cancer screening** in a clinical setting.
 
 ### Future Work and Recommendations
 * **Hyperparameter Tuning:** Experiment with different model hyperparameters to improve predictive accuracy.
