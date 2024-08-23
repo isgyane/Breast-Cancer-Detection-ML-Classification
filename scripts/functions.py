@@ -1,7 +1,7 @@
 # Import libraries used in these functions
 
 from sklearn.pipeline import make_pipeline
-from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import cross_val_score, StratifiedKFold
 from sklearn.metrics import classification_report
 import pandas as pd
 
@@ -59,7 +59,15 @@ def evaluate_classification_models(models, cv, X_train, y_train, X_test, y_test)
         cv_scores = cross_val_score(model, X_train, y_train, cv=cv)
         cv_accuracy = f"{cv_scores.mean()*100:.2f}%"
 
-        model_metrics = pd.DataFrame([[model_name, accuracy, precision,recall, f1_score, cv_accuracy]], columns=metrics_df.columns)
+        # Stratified Crossvalidation
+        ### Initialize StratifiedKFold
+        skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+        ### Perform stratified cross-validation
+        scv_score = cross_val_score(model, X_train, y_train, cv=skf)
+        scv_accuracy = f"{scv_score.mean()*100:.2f}%"
+
+
+        model_metrics = pd.DataFrame([[model_name, accuracy, precision, recall, f1_score, cv_accuracy, scv_accuracy]], columns=metrics_df.columns)
 
         if metrics_df.empty:
             metrics_df = model_metrics
@@ -92,7 +100,7 @@ def evaluate_classification_models_2(models, cv, X_train, y_train, X_test, y_tes
                   The DataFrame has columns for the model name, accuracy, precision,
                   recall, F1 score, and cross-validation score.
     """
-    metrics_df = pd.DataFrame(columns=["Model", "Accuracy", "Precision", "Recall", "F1 Score", "CV Accuracy"])
+    metrics_df = pd.DataFrame(columns=["Model", "Accuracy", "Precision", "Recall", "F1 Score", "CV Accuracy", "SCV Accuracy"])
 
     for model_name, model_class in models.items():
         # Create a pipeline
@@ -117,7 +125,15 @@ def evaluate_classification_models_2(models, cv, X_train, y_train, X_test, y_tes
             cv_scores = cross_val_score(model_pipeline, X_train, y_train, cv=cv)
             cv_accuracy = f"{cv_scores.mean()*100:.2f}%"
 
-            model_metrics = pd.DataFrame([[model_name, accuracy, precision, recall, f1_score, cv_accuracy]], columns=metrics_df.columns)
+            # Stratified Crossvalidation
+            ### Initialize StratifiedKFold
+            skf = StratifiedKFold(n_splits=cv, shuffle=True, random_state=42)
+            ### Perform stratified cross-validation
+            scv_score = cross_val_score(model_pipeline, X_train, y_train, cv=skf)
+            scv_accuracy = f"{scv_score.mean()*100:.2f}%"
+
+            # Save the metrics to a Dataframe
+            model_metrics = pd.DataFrame([[model_name, accuracy, precision, recall, f1_score, cv_accuracy, scv_accuracy]], columns=metrics_df.columns)
 
             # Append result to metrics dataframe
             if metrics_df.empty:
@@ -129,11 +145,6 @@ def evaluate_classification_models_2(models, cv, X_train, y_train, X_test, y_tes
             print(f"An error occurred while processing {model_name}: {e}")
 
     return metrics_df
-
-
-
-def wrangle(filepath):
     
-    return pd.read_csv(filepath)
 
     

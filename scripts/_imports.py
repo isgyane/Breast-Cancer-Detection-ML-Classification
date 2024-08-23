@@ -17,7 +17,7 @@ from sklearn.preprocessing import StandardScaler
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
-from sklearn.model_selection import cross_val_score, RandomizedSearchCV
+from sklearn.model_selection import cross_val_score, StratifiedKFold, RandomizedSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 
