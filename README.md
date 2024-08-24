@@ -34,13 +34,13 @@ This project was built using Python and the following key libraries:
 2. Install required dependencies using `pip install -r requirements.txt`.
 3. Run the Jupyter Notebook named `notebooks/breast_cancer_detection.ipynb`.
 
-### Key Models Developed
-* **Logistic Regression:** Achieved a cross-validation accuracy of 97.36%, demonstrating strong predictive performance.
-* **Random Forest:** Offers interpretability and robustness, useful for clinical settings.
-* **Support Vector Machine:** Effective in high-dimensional spaces, providing additional insights into tumor classification.
+### Key Models Employed
+* **Logistic Regression**
+* **Random Forest** 
+* **Support Vector Machine**
 
 ### Results and Validation
-Using the Stratified cross-validation score, the SVC model outperformed the others with a score of 97.36%, making it the most reliable model for this dataset. This high accuracy suggests that the model is well-suited for **initial breast cancer screening** in a clinical setting.
+Using the Stratified cross-validation score, the SVC model outperformed the others with a score of 97.80%, making it the most reliable model for this dataset. This high accuracy suggests that the model is well-suited for **initial breast cancer screening** in a clinical setting.
 
 ### Future Work and Recommendations
 * **Hyperparameter Tuning:** Experiment with different model hyperparameters to improve predictive accuracy.
