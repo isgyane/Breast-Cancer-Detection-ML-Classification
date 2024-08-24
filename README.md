@@ -57,6 +57,6 @@ Contributions are welcome! Please follow these steps to contribute:
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ### Key Resources Used
-* [Extracting metrics from a classification report]([url](https://stackoverflow.com/questions/48417867/access-to-numbers-in-classification-report-sklearn))
-* [Importing a notebook into another notebbook]([url](https://stackoverflow.com/questions/20186344/importing-an-ipynb-file-from-another-ipynb-file))
-* [Choosing the right estimator]([url](https://scikit-learn.org/stable/machine_learning_map.html#choosing-the-right-estimator))
+* [Extracting metrics from a classification report](https://stackoverflow.com/questions/48417867/access-to-numbers-in-classification-report-sklearn)
+* [Importing a notebook into another notebbook](https://stackoverflow.com/questions/20186344/importing-an-ipynb-file-from-another-ipynb-file)
+* [Choosing the right estimator](https://scikit-learn.org/stable/machine_learning_map.html#choosing-the-right-estimator)
